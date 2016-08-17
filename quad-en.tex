@@ -1,20 +1,19 @@
-\documentclass[oneside,a4paper]{amsart}
+\documentclass{article}
 \usepackage{quad}
 
 \begin{document}
 
-\title{A quest for 5-point condition a la Alexandrov}
+\title{A quest for 5-point condition\\ of Alexandrov's type}
 \author{Anton Petrunin}
 %\address{Anton Petrunin, Math. Dept., PSU,University Park, PA 16802, USA.}\address{petrunin@math.psu.edu}
-\keywords{Alexandrov spaces, CAT(0), CBB(0)}
 \date{}
-\begin{abstract}
-Here I give a description of Alexandrov 4-point comparison
-via quadratic forms
-and then propose a natural 5-point condition which might have some future.
-Consider this note as a letter from me --- do not take it seriously.
-\end{abstract}
 \maketitle
+\begin{abstract}
+I give a description of Alexandrov 4-point comparison
+via quadratic forms
+and then propose a natural 5-point condition which might have future.
+\end{abstract}
+
 
 \section*{Associated form}
 
@@ -23,7 +22,7 @@ for given $n$-point array $\bm{x}\z=(x_1,\dots,x_n)$ in a metric space $X$.
 
 Fix a nondegenerate simplex $\triangle$ in $\RR^{n-1}$.
 Denote by $v_1,\dots,v_n$ its vertices.
-If $(e_1,\dots,e_n)$ is the standard basis on $\RR^{n-1}$,
+If $(e_1,\dots,e_{n-1})$ is the standard basis on $\RR^{n-1}$,
 we may assume that $v_i=e_i$ for $i<n$ and $v_n=0$.
 
 Let us denote by $|a-b|_X$ the distance between points $a$ and $b$ in the metric space $X$.
@@ -33,21 +32,37 @@ for all $i$ and $j$.
 Note that this identity define $W_{\bm{x}}$ uniquely.
 
 
-The constructed quadratic form $W_{\bm{x}}$ will be called \emph{associated form} for the point array $\bm{x}$ with respect to the simplex $\triangle$.
+The constructed quadratic form $W_{\bm{x}}$ will be called \emph{form of the point array $\bm{x}$ with respect to the simplex $\triangle$}.
 
 Note that an array $\bm{x}=(x_1,\dots,x_n)$ in a metric space $X$ is isometric to an array in Euclidean space if and only if 
 $W_{\bm{x}}(v)\ge 0$
 for any $v\in \RR^{n-1}$.
 
-In particular, for $n=3$ the
-condition $W_{\bm{x}}\ge 0$ means that for the points $x_1$, $x_2$ and $x_3$,
+In particular,  the
+condition $W_{\bm{x}}\ge 0$ for triples of points means that 
 all three triangle inequalities hold. 
 
 \section*{Alexandrov's 4-point comparison}
 
-Now let us discuss the relation between form $W_{\bm{x}}$
-and geometry of the space for $n=4$.
+Now let us discuss the relation between form of quadruples
+and geometry of the space.
 In this case $\triangle$ is a tetrahedron on $\RR^3$.
+
+
+From the $3$-point case, 
+it follows that $W_{\bm{x}}$ 
+is nonnegative on every plane parallel to a face of the tetrahedron $\triangle$.
+In particular, $W_{\bm{x}}$ can have at most one negative eigenvalue.
+
+Assume $W_{\bm{x}}(w)<0$ for some $w\in\RR^3$.
+It follows from above that
+$w$ is transversal to each of 4 planes parallel to a faces of $\triangle$.
+
+Consider the projection of $\triangle$ along $w$ to a transversal plane. 
+Note that in the projection the 4 vertices of $\triangle$ lie in general position; 
+that is, no three of them lie on one line.
+Therefore  we can see one of two combinatorial pictures shown on the diagram.
+It is easy to see that the combinatorics of the picture does not depend on the choice of $w$.
 
 \begin{wrapfigure}{r}{52mm}
 \begin{lpic}[t(-5mm),b(3mm),r(0mm),l(0mm)]{pics/quad(1)}
@@ -56,25 +71,11 @@ In this case $\triangle$ is a tetrahedron on $\RR^3$.
 \end{lpic}
 \end{wrapfigure}
 
-From the case $n=3$ 
-it follows that $W_{\bm{x}}$ 
-is nonnegative on every plane parallel to a face of the tetrahedron $\triangle$.
-In particular, $W_{\bm{x}}$ can have at most one negative eigenvalue.
-
-Assume $W_{\bm{x}}(w)<0$ for some $w\in\RR^3$.
-It follows from above that
-$w$ is transversal to each of 4 planes parallel to a faces of $\triangle$.
-Let us project $\triangle$ along $w$ to a transversal plane. 
-Note that after the projection the 4 vertices of $\triangle$ lie in general position; 
-that is, no three of them lie on one line.
-Therefore in the projection we can see one of two combinatorial pictures shown on the diagram.
-It is easy to see that the combinatorics of the picture does not depend on the choice of $w$.
-
 If we see the diagram on the left we say that $\bm{x}$ is 
 of type $\quadra(4)$ and otherwise we say that it is of type $\quadra(3)$.
-%Quad refers to \emph{quadruples} of points  and the number $4$ or $3$ counts the number of vertices of the convex hull of projection. 
+ 
 
-The following statements give a connection between the associated forms $W_{\bm{x}}$
+The following statements give a connection between the forms $W_{\bm{x}}$ of the quadruple $\bm{x}$
 and the curvature bounds in the sense of Alexandrov.
 Their proofs are left to the reader.
 
@@ -85,17 +86,17 @@ Then
 for any quadrilateral $\bm{x}=(x_1,\dots,x_4)$ 
 then $X$ is isometric to a closed convex set in a Hilbert space. 
 \item $X$ has no quadruples of type $\quadra(3)$ if and only if 
-$X$ has nonnegative curvature in the sense of Alexandrov.
+$X$ has nonnegative curvature in the sense of Alexandrov, further we say ``$\Alex[0]$ space''.
 \item $X$ has no quadruples of type $\quadra(4)$ if and only if 
-$X$ is a $\CAT[0]$ space.
+$X$ is a $\CAT[0]$ space which is also called Hadamard space
 \end{itemize}
 
 \section*{5-point conditions}
 
 Let us try to do the same 
 for 5-points arrays $\bm{x}=(x^1,\dots,x^5)$ in a metric space.
-In this case the associated form $W_{\bm{x}}$ is defined on $\RR^4$
-and it has to be nonnegative on any plane which is parallel to any of 10 two-dimensional faces of the $4$-simplex $\triangle\subset \RR^4$.
+Its form $W_{\bm{x}}$ is defined on $\RR^4$
+and it has to be nonnegative on any plane which is parallel to any of 10 two-dimensional faces of the $4$-simplex $\triangle$.
 In particular $W_{\bm{x}}$ has at most two negative eigenvalues.
 
 In the case if $W_{\bm{x}}$ has exactly two negative eigenvalues,
@@ -108,7 +109,7 @@ Therefore we may get one of the following three combinatorial pictures.
 
 %\begin{center}
 \begin{wrapfigure}{r}{70mm}
-\begin{lpic}[t(-8mm),b(3mm),r(0mm),l(0mm)]{pics/penta(1)}
+\begin{lpic}[t(-3mm),b(3mm),r(0mm),l(0mm)]{pics/penta(1)}
 \lbl[]{10,-3;$\penta(5)$}
 \lbl[]{34,-3;$\penta(4)$}
 \lbl[]{57.5,-3;$\penta(3)$}
@@ -121,8 +122,7 @@ or it has exactly two negative eigenvalues and belongs to one of these three typ
 
 We may consider the metric spaces
 which do not have a 5-point arrays of some of these types.
-For example, 
-denote by $\penta(\hat 3,\hat 4)$ the class of all complete length-metric spaces 
+For example, a $\penta(\hat 3,\hat 4)$ space is a complete length-metric spaces 
 without 5-point arrays of type $\penta(3)$ and $\penta(4)$.
 
 Let us list some easy observations about these new classes of metric spaces.
@@ -132,39 +132,32 @@ Let us list some easy observations about these new classes of metric spaces.
 In other words,
 the form $W_{\bm{x}}$ for any 5-point array $\bm{x}$ in any $\CAT[0]$ space 
 has at most one negative eigenvalue.
-\item\label{ii} Any space with nonnegative curvature in the sense of Alexandrov has no  5-point arrays of type $\penta(3)$ and $\penta(4)$; 
+\item\label{ii} Any $\Alex[0]$ space  has no  5-point arrays of type $\penta(3)$ and $\penta(4)$; 
 that is, it is a $\penta(\hat 3,\hat 4)$ space.
 \item\label{iii} If a complete Riemannian manifold $M$ has no
 5-point array of type $\penta(5)$ then it is a simply connected and it has   non-positive sectional curvature.
-In other words, if a complete Riemannian manifold $M$ belongs to $\penta(\hat 5)$ then it is $\CAT[0]$.
 \end{enumerate}
-
-From the observations (\ref{i}) and (\ref{ii}) it follows that the $\penta(\hat 3,\hat 4)$
-includes all $\CAT[0]$ spaces 
-as well as the spaces with nonnegative curvature in the sense of Alexandrov.
 
 \begin{thm}{Question}
  Do $\penta(\hat 3,\hat 4)$ spaces have meaningful geometry?
 \end{thm}
-In particular we do not know the answer to the following question.
 
-\begin{thm}{Question}
-Let $X$ be a complete $\penta(\hat 3,\hat 4)$ space with intrinsic metric.
-Assume two minimizing geodesics in $X$ share three distinct points.
-Does it imply that these geodesics share an arc containing these three points?
-\end{thm}
+I find this question interesting 
+because $\penta(\hat 3,\hat 4)$ spaces include  all $\CAT[0]$ as well as $\Alex[0]$ spaces; that is Alexandrov spaces with nonnegative and nonpositive curvature.
+The latter statement follows from the observations (\ref{i}) and (\ref{ii}).
+Therefore a positive answer to the above question might lead to a uniform treatment of these two types of spaces.
 
-\begin{thm}{Question}
-Let $X$ be the coordinate plane with metric induced by norm.
-Assume $X$ is a $\penta(\hat 3,\hat 4)$ space.
-Is it true that $X$ has to be isometric to Euclidean plane?
-\end{thm}
-
+Here are couple of examples of properties shared by $\CAT[0]$ and $\Alex[0]$ spaces:
+\begin{itemize}
+\item Two minimizing geodesics with common ends and yet one common point have to coinside.
+\item A plane with metric induced by norm is $\CAT[0]$ or $\Alex[0]$ only if the norm is Euclidean.
+\end{itemize}
+At the moment I do now know if the same holds for $\penta(\hat 3,\hat 4)$ spaces.
 
 Here is an other question related to the observations (\ref{i}) and (\ref{iii}).
 
 \begin{thm}{Question}
-Is it true that any complete  $\penta(\hat 3,\hat 4,\hat 5)$ space with intrinsic metric has to be $\CAT[0]$?
+Is it true that any $\penta(\hat 3,\hat 4,\hat 5)$ space with intrinsic metric has to be $\CAT[0]$?
 \end{thm} 
 
 \end{document}
